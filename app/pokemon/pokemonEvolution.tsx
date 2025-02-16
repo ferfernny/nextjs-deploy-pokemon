@@ -8,7 +8,7 @@ pokemonName: string;
 evolutionDetail: EvolutionDetail[]
 }
 
-const pokemonEvolution: React.FC<PokemonEvolutionProps> = ({ pokemonName,  evolutionDetail}) => {
+const PokemonEvolution: React.FC<PokemonEvolutionProps> = ({ pokemonName,  evolutionDetail}) => {
 if (!evolutionDetail || evolutionDetail.length === 0) {
     return <p>No evolutions.</p>;
 }
@@ -65,5 +65,5 @@ return (
     );
 };
 
-export default pokemonEvolution;
+export default PokemonEvolution;
   

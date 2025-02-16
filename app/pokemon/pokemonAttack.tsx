@@ -5,7 +5,7 @@ interface PokemonAttackProps {
 pokemonAttack: AttackRating;
 }
 
-const pokemonAttack: React.FC<PokemonAttackProps> = ({ pokemonAttack }) => {
+const PokemonAttack: React.FC<PokemonAttackProps> = ({ pokemonAttack }) => {
 
 return (
     <div className="mt-6">
@@ -37,5 +37,5 @@ return (
     );
 };
 
-export default pokemonAttack;
+export default PokemonAttack;
   

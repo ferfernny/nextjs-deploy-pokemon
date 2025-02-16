@@ -9,7 +9,7 @@ import PokemonAttacks from './pokemonAttack';
 import PokemonEvolutions from './pokemonEvolution';
 import Link from 'next/link';
 
-const pokemonPages = () => {
+const PokemonPages = () => {
   const searchParams = useSearchParams();
   const name = searchParams.get('name');
 
@@ -46,4 +46,4 @@ const pokemonPages = () => {
   );
 };
 
-export default pokemonPages;
+export default PokemonPages;

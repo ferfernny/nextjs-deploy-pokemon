@@ -5,7 +5,7 @@ interface PokemonSummaryProps {
 pokemon: Pokemon;
 }
 
-const pokemonSummary: React.FC<PokemonSummaryProps> = ({ pokemon }) => {
+const PokemonSummary: React.FC<PokemonSummaryProps> = ({ pokemon }) => {
     return (
       <div>
         <div className="flex items-center justify-between mb-6">
@@ -101,5 +101,5 @@ const pokemonSummary: React.FC<PokemonSummaryProps> = ({ pokemon }) => {
     );
   };
 
-export default pokemonSummary;
+export default PokemonSummary;
   
