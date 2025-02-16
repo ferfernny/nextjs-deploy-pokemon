@@ -1,5 +1,6 @@
 import React from 'react';
 import { Pokemon } from './types';
+import Image from 'next/image';
 
 interface PokemonSummaryProps {
 pokemon: Pokemon;
@@ -12,10 +13,12 @@ const PokemonSummary: React.FC<PokemonSummaryProps> = ({ pokemon }) => {
           <h2 className="text-3xl semi-bold-grey">
             {pokemon.name} #{pokemon.number}
           </h2>
-          <img
+          <Image
             src={pokemon.image}
             alt={pokemon.name}
-            className="w-50 h-50 object-contain"
+            width={400}
+            height={400}
+            className="rounded-full"
           />
         </div>
   

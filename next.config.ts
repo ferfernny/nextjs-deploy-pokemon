@@ -1,5 +1,8 @@
 // next.config.js
 module.exports = {
+  images: {
+    domains: ['img.pokemondb.net'],
+  },
   async redirects() {
     return [
       {
