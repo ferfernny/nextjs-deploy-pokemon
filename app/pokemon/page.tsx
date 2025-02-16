@@ -8,7 +8,6 @@ import PokemonSummary from './pokemonSummary';
 import PokemonAttacks from './pokemonAttack';
 import PokemonEvolutions from './pokemonEvolution';
 import Link from 'next/link';
-import React, { Suspense } from 'react';
 
 const PokemonPages = () => {
   const searchParams = useSearchParams();
@@ -29,23 +28,21 @@ const PokemonPages = () => {
   }
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div className="white-background">
-        <Link href="/">
-          <h1 className="green-button">
-            Search pokemon
-          </h1>
-        </Link>
-        <PokemonSummary pokemon={pokemon} />
-        <PokemonAttacks pokemonAttack={pokemon.attacks} />
-        {pokemon.evolutions && pokemon.evolutions.length > 0 && (
-          <PokemonEvolutions 
-              pokemonName={pokemon.name} 
-              evolutionDetail = {pokemon.evolutions} 
-          />
-        )}
-      </div>
-    </Suspense>
+    <div className="white-background">
+      <Link href="/">
+        <h1 className="green-button">
+          Search pokemon
+        </h1>
+      </Link>
+      <PokemonSummary pokemon={pokemon} />
+      <PokemonAttacks pokemonAttack={pokemon.attacks} />
+      {pokemon.evolutions && pokemon.evolutions.length > 0 && (
+        <PokemonEvolutions 
+            pokemonName={pokemon.name} 
+            evolutionDetail = {pokemon.evolutions} 
+        />
+      )}
+    </div>
   );
 };
 
